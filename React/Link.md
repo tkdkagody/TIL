@@ -16,6 +16,7 @@ Link를 통해 다른 화면에 정보를 실어 보낼 수 있다.
 
 #### obj방식 : state 를 통해 데이터 그 자체를 보낼 수 있다.
 
+1. 링크로 state 보내기
 <Link
     to={{
         pathname: "/courses",
@@ -24,3 +25,10 @@ Link를 통해 다른 화면에 정보를 실어 보낼 수 있다.
         state: { fromDashboard: true }
     }}
 />
+
+2. state받아오기 : useLocation을 통해
+
+```js
+const location = useLocation();
+//console.log(location); //Link state로 넘겨받은 값을 불러옴
+```
